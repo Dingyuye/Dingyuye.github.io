@@ -182,7 +182,7 @@
     display:grid;
     grid-template-columns:1fr 300px;
     gap:44px;
-    align-items:start;
+    align-items:center;
   }
   .about-text p{max-width:none;}
   .about-photos{
@@ -213,8 +213,47 @@
     text-align:center;
   }
   @media (max-width:760px){
-    .about-grid{grid-template-columns:1fr; gap:28px;}
+    .about-grid{grid-template-columns:1fr; gap:28px; align-items:start;}
     .about-photos{grid-column:1; grid-row:1; max-width:280px; gap:16px;}
+  }
+
+  /* ---------- MEDIA FEATURE PHOTO ---------- */
+  .media-feature{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:28px;
+    align-items:center;
+    margin:24px 0 36px;
+    padding:20px;
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    border-radius:2px;
+  }
+  .media-feature img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:1px solid var(--line);
+    border-radius:2px;
+    box-shadow:var(--shadow);
+    background:var(--white);
+  }
+  .media-feature figcaption{
+    margin-top:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.02em;
+    color:var(--ink-faint);
+    text-align:center;
+  }
+  .media-feature .media-feature-text p{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .media-feature .media-feature-text p + p{margin-top:12px;}
+  @media (max-width:640px){
+    .media-feature{grid-template-columns:1fr;}
   }
 
   /* ---------- IMPACT LEDGER (signature element) ---------- */
@@ -457,23 +496,10 @@
         </p>
       </div>
       <div class="about-photos">
-
         <figure class="about-photo">
-
           <img src="Ding_Yuye.jpeg" alt="Yuye Ding, full-length portrait">
-
           <figcaption>Yuye at the Katz Graduate School of Business</figcaption>
-
         </figure>
-
-        <figure class="about-photo">
-
-          <img src="with_Mark_PPG.png" alt="Mark Ma and Yuye Ding in front of the Cathedral of Learning">
-
-          <figcaption>Mark Ma (Advisor) and Yuye Ding &middot; Pittsburgh Post-Gazette, May 2026</figcaption>
-
-        </figure>
-
       </div>
     </div>
   </div>
@@ -654,6 +680,25 @@
     <div class="section-head">
       <span class="eyebrow">In the Press</span>
       <h2>Media Coverage</h2>
+    </div>
+
+    <div class="media-feature">
+      <figure style="margin:0;">
+        <img src="with_Mark_PPG.png" alt="Mark Ma and Yuye Ding in front of the Cathedral of Learning">
+        <figcaption>Mark Ma (Advisor) and Yuye Ding &middot; Pittsburgh Post-Gazette, May 2026</figcaption>
+      </figure>
+      <div class="media-feature-text">
+        <p>
+          <strong>Pittsburgh Post-Gazette, May 2026 —</strong> As students protest artificial intelligence on campus,
+          Yuye and her advisor Mark (Shuai) Ma were profiled discussing their research on AI adoption in the workplace.
+        </p>
+        <p>
+          The piece draws on their working paper, <em>Tracking Artificial Intelligence Sentiment in the U.S. Labor Market</em>,
+          which cautions that companies moving too quickly on AI adoption risk outpacing worker trust and readiness —
+          and highlights the need for firms to balance efficiency gains with employee well-being.
+          <a href="https://www.post-gazette.com/business/tech-news/2026/05/30/artificial-intelligence-workforce-job-displacement-pitt/stories/202605220063" target="_blank" rel="noopener">Read the full article</a>.
+        </p>
+      </div>
     </div>
 
     <div class="impact-ledger" id="impactLedger">
