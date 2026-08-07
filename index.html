@@ -37,7 +37,7 @@
     background:var(--paper);
     color:var(--ink);
     font-family:'Source Sans 3', sans-serif;
-    font-size:16.5px;
+    font-size:20px;
     line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
@@ -56,7 +56,7 @@
 
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
+    font-size:0.89rem;
     letter-spacing:0.14em;
     text-transform:uppercase;
     color:var(--brass);
@@ -79,7 +79,7 @@
     gap:16px;
   }
   nav.topbar .brandmark{
-    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; color:var(--ink);
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.3rem; color:var(--ink);
     white-space:nowrap;
   }
   nav.topbar .links{
@@ -88,7 +88,7 @@
   nav.topbar .links::-webkit-scrollbar{display:none;}
   nav.topbar .links a{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.76rem;
+    font-size:0.94rem;
     letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--ink-soft);
@@ -112,13 +112,13 @@
     display:flex; justify-content:space-between; align-items:flex-start; gap:32px; flex-wrap:wrap;
   }
   .hero-name{
-    font-size:clamp(2.4rem, 5vw, 3.4rem);
+    font-size:clamp(2.98rem, 5vw, 4.22rem);
     line-height:1.05;
     letter-spacing:-0.01em;
   }
   .hero-role{
     margin-top:10px;
-    font-size:1.05rem;
+    font-size:1.3rem;
     color:var(--ink-soft);
     font-family:'Source Sans 3', sans-serif;
     max-width:520px;
@@ -138,7 +138,7 @@
     padding:5px 0;
     border-bottom:1px dashed var(--line-soft);
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
+    font-size:0.97rem;
   }
   .ledger-card .row:last-child{border-bottom:none;}
   .ledger-card .row .label{color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.04em;}
@@ -151,7 +151,7 @@
   }
   .link-plain{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.88rem;
+    font-size:1.09rem;
     color:var(--ink);
     border-bottom:1px solid var(--ink);
   }
@@ -165,10 +165,10 @@
   section{padding:56px 0;}
   section + section{border-top:1px solid var(--line);}
   .section-head{margin-bottom:28px; max-width:620px;}
-  .section-head h2{font-size:1.7rem;}
+  .section-head h2{font-size:2.11rem;}
 
   p{color:var(--ink-soft);}
-  #about p{font-size:1.05rem; max-width:680px;}
+  #about p{font-size:1.3rem; max-width:680px;}
 
   /* ---------- IMPACT LEDGER (signature element) ---------- */
   .impact-ledger{
@@ -187,14 +187,14 @@
   .impact-ledger .stat:last-child{border-right:none;}
   .impact-ledger .stat .num{
     font-family:'IBM Plex Mono', monospace;
-    font-size:1.7rem;
+    font-size:2.11rem;
     font-weight:600;
     color:var(--rust);
     display:block;
   }
   .impact-ledger .stat .lbl{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
+    font-size:0.84rem;
     letter-spacing:0.05em;
     text-transform:uppercase;
     color:var(--ink-faint);
@@ -218,7 +218,7 @@
   .stamp{
     display:inline-block;
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
+    font-size:0.84rem;
     letter-spacing:0.08em;
     text-transform:uppercase;
     padding:4px 10px;
@@ -227,8 +227,8 @@
     transform:rotate(-1.2deg);
     margin-bottom:14px;
   }
-  .jmp-card h3{font-size:1.25rem; line-height:1.4;}
-  .jmp-card .committee{margin-top:14px; font-size:0.9rem; color:var(--ink-soft);}
+  .jmp-card h3{font-size:1.55rem; line-height:1.4;}
+  .jmp-card .committee{margin-top:14px; font-size:1.12rem; color:var(--ink-soft);}
 
   /* ---------- WORKING PAPERS ---------- */
   .paper{
@@ -236,12 +236,17 @@
     border-bottom:1px solid var(--line-soft);
   }
   .paper:last-child{border-bottom:none;}
-  .paper-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;}
-  .paper h3{font-size:1.08rem; line-height:1.45; font-weight:500;}
-  .paper .authors{font-size:0.85rem; color:var(--ink-faint); margin-top:4px;}
+  .paper-top{display:grid; grid-template-columns:1fr auto; align-items:start; gap:16px;}
+  .paper-top .status-pill{justify-self:end; margin-top:2px;}
+  @media (max-width:640px){
+    .paper-top{grid-template-columns:1fr; gap:8px;}
+    .paper-top .status-pill{justify-self:start;}
+  }
+  .paper h3{font-size:1.34rem; line-height:1.45; font-weight:500;}
+  .paper .authors{font-size:1.05rem; color:var(--ink-faint); margin-top:4px;}
   .status-pill{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.66rem;
+    font-size:0.82rem;
     letter-spacing:0.05em;
     text-transform:uppercase;
     padding:3px 9px;
@@ -251,8 +256,8 @@
     border-radius:2px;
   }
   .status-pill.rr{color:var(--rust); border-color:var(--rust);}
-  .paper .links-row{margin-top:8px; font-size:0.85rem;}
-  .paper ul.notes{margin:10px 0 0; padding-left:18px; font-size:0.9rem; color:var(--ink-soft);}
+  .paper .links-row{margin-top:8px; font-size:1.05rem;}
+  .paper ul.notes{margin:10px 0 0; padding-left:18px; font-size:1.12rem; color:var(--ink-soft);}
   .paper ul.notes li{margin-bottom:3px;}
 
   /* ---------- MEDIA LIST ---------- */
@@ -263,10 +268,10 @@
     gap:16px;
     padding:14px 0;
     border-bottom:1px solid var(--line-soft);
-    font-size:0.92rem;
+    font-size:1.14rem;
   }
-  .press-item .date{font-family:'IBM Plex Mono', monospace; font-size:0.76rem; color:var(--ink-faint); padding-top:2px;}
-  .press-item .outlet{font-weight:600; color:var(--ink); font-family:'Fraunces', serif; font-size:1rem;}
+  .press-item .date{font-family:'IBM Plex Mono', monospace; font-size:0.94rem; color:var(--ink-faint); padding-top:2px;}
+  .press-item .outlet{font-weight:600; color:var(--ink); font-family:'Fraunces', serif; font-size:1.24rem;}
   .press-item .headline{color:var(--ink-soft);}
   .press-item[hidden]{display:none;}
   @media (max-width:600px){
@@ -276,7 +281,7 @@
     margin-top:20px;
     background:none; border:none; cursor:pointer;
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
+    font-size:0.97rem;
     letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--brass-deep);
@@ -292,11 +297,11 @@
     border-bottom:1px solid var(--line-soft);
   }
   .entry-row:last-child{border-bottom:none;}
-  .entry-row .who h3{font-size:1.02rem; font-weight:500;}
-  .entry-row .who .sub{font-size:0.85rem; color:var(--ink-faint); margin-top:2px;}
+  .entry-row .who h3{font-size:1.26rem; font-weight:500;}
+  .entry-row .who .sub{font-size:1.05rem; color:var(--ink-faint); margin-top:2px;}
   .entry-row .when{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
+    font-size:0.97rem;
     color:var(--ink-soft);
     white-space:nowrap;
     padding-top:3px;
@@ -312,10 +317,10 @@
   .conf-row{
     display:flex; justify-content:space-between; gap:12px; padding:10px 0;
     border-bottom:1px dashed var(--line-soft);
-    font-size:0.92rem;
+    font-size:1.14rem;
   }
   .conf-row:last-child{border-bottom:none;}
-  .conf-row .role{font-size:0.78rem; color:var(--ink-faint); font-family:'IBM Plex Mono', monospace;}
+  .conf-row .role{font-size:0.97rem; color:var(--ink-faint); font-family:'IBM Plex Mono', monospace;}
 
   /* ---------- CONTACT / FOOTER ---------- */
   footer{
@@ -324,14 +329,14 @@
     padding:52px 0 34px;
   }
   footer .eyebrow{color:#C9B879;}
-  footer h2{color:var(--white); font-size:1.6rem;}
+  footer h2{color:var(--white); font-size:1.98rem;}
   footer p{color:#C3CDC0; max-width:560px;}
   footer .contact-links{display:flex; gap:20px; flex-wrap:wrap; margin-top:20px;}
   footer a{color:#E8E2C6; border-bottom-color:rgba(232,226,198,0.4);}
   footer a:hover{border-bottom-color:#E8E2C6;}
   footer .fine{
     margin-top:36px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.12);
-    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:#8AA087;
+    font-family:'IBM Plex Mono', monospace; font-size:0.89rem; color:#8AA087;
   }
 </style>
 </head>
@@ -541,13 +546,13 @@
       <span class="eyebrow">Presentations</span>
       <h2>Conferences &amp; Workshops</h2>
     </div>
-    <div class="conf-row"><span>2026 AAA Global Connect (formerly Annual Meeting) <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2026</span></div>
-    <div class="conf-row"><span>2026 Financial Accounting and Reporting Section Midyear Meeting <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jan 2026</span></div>
-    <div class="conf-row"><span>AAA/Deloitte Foundation/J. Michael Cook Doctoral Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2025</span></div>
-    <div class="conf-row"><span>Creating Resilient Organizations: Evidence from Research on Sustainability <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2025</span></div>
-    <div class="conf-row"><span>Academy of Management Annual Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2024</span></div>
-    <div class="conf-row"><span>Hawaii Accounting Research Doctoral Institute (HARDI) Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2024</span></div>
-    <div class="conf-row"><span>AAA Spark Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2024</span></div>
+    <div class="conf-row"><span>2026 AAA Global Connect (formerly Annual Meeting) <span class="role">Presenter</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">Aug 2026</span></div>
+    <div class="conf-row"><span>2026 Financial Accounting and Reporting Section Midyear Meeting <span class="role">Participant</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">Jan 2026</span></div>
+    <div class="conf-row"><span>AAA/Deloitte Foundation/J. Michael Cook Doctoral Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">Jun 2025</span></div>
+    <div class="conf-row"><span>Creating Resilient Organizations: Evidence from Research on Sustainability <span class="role">Participant</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">May 2025</span></div>
+    <div class="conf-row"><span>Academy of Management Annual Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">Aug 2024</span></div>
+    <div class="conf-row"><span>Hawaii Accounting Research Doctoral Institute (HARDI) Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">Jun 2024</span></div>
+    <div class="conf-row"><span>AAA Spark Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:1.02rem; color:var(--ink-faint);">May 2024</span></div>
   </div>
 </section>
 
