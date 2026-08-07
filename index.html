@@ -118,10 +118,14 @@
   }
   .hero-role{
     margin-top:10px;
-    font-size:1.3rem;
+    font-size:1.15rem;
     color:var(--ink-soft);
     font-family:'Source Sans 3', sans-serif;
-    max-width:520px;
+    max-width:640px;
+    white-space:nowrap;
+  }
+  @media (max-width:760px){
+    .hero-role{white-space:normal; max-width:520px;}
   }
   .hero-role strong{color:var(--ink); font-weight:600;}
 
@@ -129,20 +133,21 @@
     background:var(--white);
     border:1px solid var(--line);
     border-radius:2px;
-    padding:16px 20px;
-    min-width:230px;
+    padding:16px 22px;
+    min-width:300px;
     box-shadow:var(--shadow);
   }
   .ledger-card .row{
-    display:flex; justify-content:space-between; gap:12px;
-    padding:5px 0;
+    display:flex; justify-content:space-between; align-items:baseline; gap:18px;
+    padding:6px 0;
     border-bottom:1px dashed var(--line-soft);
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.97rem;
+    font-size:0.86rem;
+    white-space:nowrap;
   }
   .ledger-card .row:last-child{border-bottom:none;}
   .ledger-card .row .label{color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.04em;}
-  .ledger-card .row .value{color:var(--ink); font-weight:500; text-align:right;}
+  .ledger-card .row .value{color:var(--ink); font-weight:500; text-align:right; margin-left:auto;}
 
   .hero-links{
     margin-top:26px;
